@@ -1,7 +1,7 @@
 /*jQuery document.ready*/
 $(function() {
   /*First input box: reduce method*/
-  /*Create data*/
+  /*Create array and variables*/
   const data = [5, 10, 15, 20],
     input = $('#firstInput'),
     submit = $('#firstSubmit'),
@@ -11,7 +11,7 @@ $(function() {
     /*Make value a number*/
     const val = input.val();
     const num = parseInt(val);
-    /*Make sure it's real number*/
+    /*Make sure it's a number*/
     if (!isNaN(num)) {
       /*Add value to the array*/
       data.push(num);
@@ -27,7 +27,7 @@ $(function() {
   /*jQuery document.ready*/
 $(function() {
   /*Second input box: map method*/
-  /*Create data*/
+  /*Create array and variables*/
   const array = [2, 4, 6, 8],
     input = $('#secondInput'),
     submit = $('#secondSubmit'),
@@ -37,7 +37,7 @@ $(function() {
     /*Make value a number*/
     const val = input.val();
     const num = parseInt(val);
-    /*Make sure it's real number*/
+    /*Make sure it's a number*/
     if (!isNaN(num)) {
       /*map method*/
       const sum = array.map(function(bird) {
@@ -53,7 +53,7 @@ $(function() {
 /*jQuery document.ready*/
 $(function() {
   /*Third input box: filter method*/
-  /*Create data*/
+  /*Create array and variables*/
   const list = [350, 6000, 8, 210, 56, 3, 74],
     input = $('#thirdInput'),
     submit = $('#thirdSubmit'),
@@ -63,7 +63,7 @@ $(function() {
     /*Make value a number*/
     const val = input.val();
     const num = parseInt(val);
-    /*Make sure it's real number*/
+    /*Make sure it's a number*/
     if (!isNaN(num)) {
       /*filter method*/
       const sum = list.filter(function(bear) {
@@ -90,7 +90,7 @@ $(function() {
     /*Make value a number*/
     const val = input.val();
     const num = parseInt(val);
-    /*Make sure it's real number*/
+    /*Make sure it's a number*/
     if (!isNaN(num)) {
       /*find method*/
       const sum = list.find(function(fish) {
