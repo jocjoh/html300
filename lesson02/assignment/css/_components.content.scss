@@ -34,19 +34,37 @@
     float: left;
     padding-top: 30px;
     align-self: center;
+
+    &__headshot {
+      width: 225px;
+      height: 222px;
+      border-radius: 50%;
+    }
+
+    &__name {
+      font-size: 26px;
+      font-weight: bold;
+      color: #707070;
+      font-family: HelveticaNeue-Bold, "Helvetica Neue"; /*Add variable*/
+      text-align: center;
+    }
+
+    &__title {
+      color: rgb(112, 112, 112);
+      font-size: 20px;
+      font-weight: lighter;
+      font-family: HelveticaNeue-Bold, "Helvetica Neue"; /*Add variable*/
+      font-style: italic;
+      text-align: center;
+    }
 }
 
+/*media queries for photo title block*/
 @media screen and (max-width: 500px) {
     .photo-title {
         width: 100%;
         float: none;
     }
-}
-
-.headshot {
-    width: 225px;
-    height: 222px;
-    border-radius: 50%;
 }
 
 @media screen and (max-width: 500px) {
@@ -61,24 +79,7 @@
     }
 }
 
-.name {
-    font-size: 26px;
-    font-weight: bold;
-    color: #707070;
-    font-family: HelveticaNeue-Bold, "Helvetica Neue"; /*Add variable*/
-    text-align: center;
-}
-
-.title {
-    color: rgb(112, 112, 112);
-    font-size: 20px;
-    font-weight: lighter;
-    font-family: HelveticaNeue-Bold, "Helvetica Neue"; /*Add variable*/
-    font-style: italic;
-    text-align: center;
-}
-
-.profile {
+.info {
     width: 500px;
     height: 309px;
     background-color: #f5f5f5; /*Add variable*/
@@ -89,20 +90,23 @@
     align-items: center;
 }
 
-@media screen and (max-width: 500px) {
-    .profile {
-        width: 100%;
+.profile {
+    &__para {
+      font-size: 20px;
+      font-weight: normal;
+      font-family: HelveticaNeue-Bold, "Helvetica Neue"; /*Add variable*/
+      color: #707070;
+      align-self: center;
     }
-}
-
-p {
-    font-size: 20px;
-    font-weight: normal;
-    font-family: HelveticaNeue-Bold, "Helvetica Neue"; /*Add variable*/
-    color: #707070;
-    align-self: center;
 }
 
 img {
     vertical-align: middle;
+}
+
+/*media querie for profile block*/
+@media screen and (max-width: 500px) {
+    .profile {
+        width: 100%;
+    }
 }
