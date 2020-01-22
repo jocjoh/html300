@@ -35,12 +35,27 @@
     float: left;
     padding-top: 30px;
     align-self: center;
+
+    /*media query for photo/name/title block*/
+    @include for-phone-only {
+        width: 100%;
+        float: none;
+    }
     
     /*First instance of nesting*/
     &__headshot {
       width: 225px;
       height: 222px;
       border-radius: 50%;
+
+      /*media queries for headshot*/
+      @include for-phone-only {
+          margin-left: 20%;
+      }
+
+      @include for-smaller-phone {
+          margin-left: 10%;
+      }
     }
 
     &__name {
@@ -61,25 +76,6 @@
     }
 }
 
-/*media queries for photo title block*/
-@media screen and (max-width: 500px) {
-    .photo-title {
-        width: 100%;
-        float: none;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .photo-title__headshot {
-        margin-left: 20%;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .photo-title__headshot {
-        margin-left: 10%;
-    }
-}
 
 /*Style for info container*/
 .info {
@@ -93,7 +89,7 @@
     align-items: center;
 }
 
-/*Style for profile container*/
+/*Style for profile container and second instance of nesting*/
 .profile {
     &__para {
       font-size: 20px;
