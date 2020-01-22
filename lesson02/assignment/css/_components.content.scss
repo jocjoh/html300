@@ -2,7 +2,7 @@
 .main {
     width: 951px;
     height: 474px;
-    background-color: $outter-gray; /*insert variable*/
+    background-color: $outter-gray; /*variable*/
     border: 0.5px solid #d3d3d3;
     border-radius: 5px;
     
@@ -62,7 +62,7 @@
       font-size: 26px;
       font-weight: bold;
       color: #707070;
-      font-family: $font; /*insert variable*/
+      font-family: $font; /*variable*/
       text-align: center;
     }
 
@@ -70,7 +70,7 @@
       color: rgb(112, 112, 112);
       font-size: 20px;
       font-weight: lighter;
-      font-family: $font; /*insert variable*/
+      font-family: $font; /*variable*/
       font-style: italic;
       text-align: center;
     }
@@ -81,7 +81,7 @@
 .info {
     width: 500px;
     height: 309px;
-    background-color: $inner-gray; /*insert variable*/
+    background-color: $inner-gray; /*variable*/
     align-self: center;
     padding-left: 30px;
     margin: 20px;
@@ -99,7 +99,7 @@
     &__para {
       font-size: 20px;
       font-weight: normal;
-      font-family: $font; /*insert variable*/
+      font-family: $font; /*variable*/
       color: #707070;
       align-self: center;
     }
