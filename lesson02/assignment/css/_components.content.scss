@@ -24,7 +24,7 @@
     
     /*media query for white box*/
     @include for-phone-only {
-        width: 100%;
+        width: 80%;
         height: 100%;
         display: block;
     }
@@ -38,7 +38,7 @@
 
     /*media query for photo/name/title block*/
     @include for-phone-only {
-        width: 100%;
+        width: 75%;
         float: none;
     }
     
@@ -87,6 +87,11 @@
     margin: 20px;
     display: flex;
     align-items: center;
+
+    /*media query for info box*/
+    @include for-phone-only {
+        width: 80%;
+    }
 }
 
 /*Style for profile container and second instance of nesting*/
