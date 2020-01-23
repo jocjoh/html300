@@ -90,7 +90,8 @@
 
     /*media query for info box*/
     @include for-phone-only {
-        width: 80%;
+        width: 75%;
+        margin: 0px;
     }
 }
 
