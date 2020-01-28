@@ -28,6 +28,7 @@ const myCode = `
           <p class="profile__para"><strong>Major:</strong> ${person.major}</p>
           <p class="profile__para"><strong>Email:</strong> ${person.email}</p>
           <p class="profile__para"><img src="img/linkedin.svg" class="linkedin" alt="LinkedIn logo"> ${person.linkedInUrl}</p>
+          <p class="profile__para"><strong>Code languages:</strong> ${person.codeLanguages}</p>
         </div>
       </div>
     </main>`;
