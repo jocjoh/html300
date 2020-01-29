@@ -1,8 +1,8 @@
 /*mixins for media queries*/
-@mixin for-phone-only {
+@mixin small-screen {
     @media (max-width: 500px) { @content; }
 }
 
-@mixin for-smaller-phone {
+@mixin extra-small-screen {
     @media (max-width: 375px) { @content; }
 }

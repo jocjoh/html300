@@ -2,12 +2,12 @@
 .main {
     width: 951px;
     height: 474px;
-    background-color: $outter-gray; /*variable*/
+    background-color: $outer-gray; /*variable*/
     border: 0.5px solid #d3d3d3;
     border-radius: 5px;
     
     /*media query for outter gray box*/
-    @include for-phone-only {
+    @include small-screen {
         width: 100%;
         height: 100%;
     }
@@ -23,7 +23,7 @@
     margin: 45px;
     
     /*media query for white box*/
-    @include for-phone-only {
+    @include small-screen {
         width: 80%;
         height: 100%;
         display: block;
@@ -37,7 +37,7 @@
     align-self: center;
 
     /*media query for photo/name/title block*/
-    @include for-phone-only {
+    @include small-screen {
         width: 75%;
         float: none;
     }
@@ -49,11 +49,11 @@
       border-radius: 50%;
 
       /*media queries for headshot*/
-      @include for-phone-only {
+      @include small-screen {
           margin-left: 20%;
       }
 
-      @include for-smaller-phone {
+      @include extra-small-screen {
           margin-left: 10%;
       }
     }
@@ -89,24 +89,22 @@
     align-items: center;
 
     /*media query for info box*/
-    @include for-phone-only {
+    @include small-screen {
         width: 75%;
         margin: 0px;
     }
 }
 
 /*Style for profile container and second instance of nesting*/
-.profile {
-    &__para {
-      font-size: 20px;
-      font-weight: normal;
-      font-family: $font; /*variable*/
-      color: #707070;
-      align-self: center;
-    }
+p {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: $font; /*variable*/
+    color: #707070;
+    align-self: center;
     
     /*media query for profile container*/
-    @include for-phone-only {
+    @include small-screen {
         width: 100%;
     }
 
