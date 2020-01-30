@@ -1,7 +1,7 @@
-/*style for outter gray box*/
+/*style for outer gray box*/
 .main {
-    width: 951px;
-    height: 474px;
+    width: 59.438rem;
+    height: 29.625rem;
     background-color: $outer-gray; /*variable*/
     border: 0.5px solid #d3d3d3;
     border-radius: 5px;
@@ -15,12 +15,12 @@
 
 /*style for white box*/
 .background {
-    width: 847px;
-    height: 383px;
+    width: 52.938rem;
+    height: 23.938rem;
     background-color: white;
     display: flex;
     justify-content: space-evenly;
-    margin: 45px;
+    margin: 2.813rem;
     
     /*media query for white box*/
     @include small-screen {
@@ -33,7 +33,7 @@
 /*style for photo/name/title*/
 .photo-title {
     float: left;
-    padding-top: 30px;
+    padding-top: 6.25rem;
     align-self: center;
 
     /*media query for photo/name/title block*/
@@ -44,9 +44,9 @@
     
     /*First instance of nesting*/
     &__headshot {
-      width: 225px;
-      height: 222px;
-      border-radius: 50%;
+        width: 14.063rem;
+        height: 13.875rem;
+        border-radius: 50%;
 
       /*media queries for headshot*/
       @include small-screen {
@@ -59,7 +59,7 @@
     }
 
     &__name {
-      font-size: 26px;
+      font-size: 1.625;
       font-weight: bold;
       color: #707070;
       font-family: $font; /*variable*/
@@ -68,7 +68,7 @@
 
     &__title {
       color: rgb(112, 112, 112);
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: lighter;
       font-family: $font; /*variable*/
       font-style: italic;
@@ -79,12 +79,12 @@
 
 /*Style for info container*/
 .info {
-    width: 500px;
-    height: 309px;
+    width: 31.25rem;
+    height: 19.313rem;
     background-color: $inner-gray; /*variable*/
     align-self: center;
-    padding-left: 30px;
-    margin: 20px;
+    padding-left: 1.875rem;
+    margin: 1.25rem;
     display: flex;
     align-items: center;
 
@@ -97,7 +97,7 @@
 
 /*Style for profile container and second instance of nesting*/
 p {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: normal;
     font-family: $font; /*variable*/
     color: #707070;
