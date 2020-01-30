@@ -1,3 +1,4 @@
+//Create object with data from JSON file
 const guys = [
     { name: "Steve Smith", jobTitle: "Project Manager", company: "Front End Dev Co", experience: "3 years", school: "UW", major: "Marketing", email: "steve@fedc.com", linkedInUrl: "steve.linkedinprofile.com" },
     { name: "Aaron Katz", jobTitle: "Full Stack Developer", company: "Web Sites and More", experience: "5 years", school: "SU", major: "Computer Science", email: "aaronNotMyemail@uw.com", linkedInUrl: "aaron.linkedinprofile.com"},
@@ -5,6 +6,7 @@ const guys = [
     { name: "Michael Jordan", jobTitle: "Point Guard", company: "Chicago Bulls", experience: "20 years", school: "UNC", major: "Trash Talking", email: "mJordan@bulls.com", linkedInUrl: "mJordan.linkedinprofile.com"},
 ];
 
+//Create variable containing html and map through elements of object above
 const myCode = `
     ${guys.map(guys => `
     <main class="main">
@@ -28,5 +30,5 @@ const myCode = `
     </main>`
     )}
 `;
-
+//Attach html in variable to html document
  document.body.innerHTML = myCode;
