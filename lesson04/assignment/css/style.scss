@@ -1,7 +1,6 @@
-h2 {
-    color: $orange;
-}
-
-nav {
-    color: $mauve;
-}
+// Import partials here
+@import 'mixin';
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
