@@ -4,11 +4,17 @@
 
 header {
     border-style: double;
-    border-color: $green;
+    border-width: 1rem;
+    border-color: $mauve;
     width: 100%;
+    height: 20rem;
     padding-top: 10rem;
     background: url(clothes.jpg);
     background-size: cover;
+}
+
+a {
+    text-decoration: none;
 }
 
 

@@ -359,9 +359,16 @@ th {
 
 header {
   border-style: double;
-  border-color: #c6d8cf;
+  border-width: 1rem;
+  border-color: #dfbbb6;
   width: 100%;
-  padding-top: 10rem; }
+  height: 20rem;
+  padding-top: 10rem;
+  background: url(clothes.jpg);
+  background-size: cover; }
+
+a {
+  text-decoration: none; }
 
 /* Button styling, created by Will Woodgate, JSFiddle: https://jsfiddle.net/willwood/gjf139z4/5/ */
 i {
