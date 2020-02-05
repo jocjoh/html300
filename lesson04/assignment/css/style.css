@@ -365,7 +365,7 @@ header {
   background: url(clothes.jpg);
   background-size: cover; }
 
-.header_nav {
+.nav {
   margin-left: 15%;
   margin-top: 1%;
   color: #dc7863;
@@ -373,13 +373,28 @@ header {
 
 a {
   text-decoration: none;
-  color: #dc7863; }
+  color: inherit; }
 
-section {
+.primary {
   margin-left: 15%;
+  width: 40%;
+  margin-top: 1%;
+  padding: 1%;
+  float: left;
+  border-style: double;
+  border-color: #c6d8cf;
+  border-width: 1.5rem; }
+
+h1 {
+  color: #e7c9b1;
+  font-weight: bolder; }
+
+aside {
   margin-right: 15%;
   margin-top: 1%;
-  float: left;
+  padding: 1%;
+  width: 18%;
+  float: right;
   border-style: double;
   border-color: #c6d8cf;
   border-width: 1.5rem; }
@@ -387,6 +402,9 @@ section {
 h2 {
   color: #e7c9b1;
   font-weight: bolder; }
+
+.side-button {
+  padding-left: 5.625rem; }
 
 /* Button styling, created by Will Woodgate, JSFiddle: https://jsfiddle.net/willwood/gjf139z4/5/ */
 i {
@@ -419,3 +437,24 @@ a.hiButton:hover {
 @keyframes pulsing {
   to {
     box-shadow: 0 0 0 30px rgba(232, 76, 61, 0); } }
+
+/*Styles for second content box on index page*/
+.secondary {
+  margin-left: 15%;
+  width: 40%;
+  margin-top: 1%;
+  padding: 1%;
+  float: left;
+  border-style: double;
+  border-color: #c6d8cf;
+  border-width: 1.5rem; }
+
+/*Footer styles*/
+.footer {
+  text-align: center;
+  color: #dc7863; }
+  .footer__nav {
+    display: inline-block;
+    margin-left: 20%;
+    padding-left: 10%;
+    padding-top: 1%; }
