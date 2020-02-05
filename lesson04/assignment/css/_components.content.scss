@@ -4,17 +4,38 @@
 
 header {
     border-style: double;
-    border-width: 1rem;
+    border-width: 1.5rem;
     border-color: $mauve;
-    width: 100%;
     height: 20rem;
-    padding-top: 10rem;
     background: url(clothes.jpg);
     background-size: cover;
 }
 
+.header_nav {
+    margin-left: 15%;
+    margin-top: 1%;
+    color: $orange;
+    font-weight: bolder;
+}
+
 a {
     text-decoration: none;
+    color: $orange;
+}
+
+section {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1%;
+    float: left;
+    border-style: double;
+    border-color: $green;
+    border-width: 1.5rem;
+}
+
+h2 {
+    color: $tan;
+    font-weight: bolder;
 }
 
 

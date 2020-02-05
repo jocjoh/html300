@@ -355,20 +355,38 @@ th {
   padding: 0; }
 
 * {
-  font-family: HelveticaNeue-Bold, "Helvetica Neue"; }
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 header {
   border-style: double;
-  border-width: 1rem;
+  border-width: 1.5rem;
   border-color: #dfbbb6;
-  width: 100%;
   height: 20rem;
-  padding-top: 10rem;
   background: url(clothes.jpg);
   background-size: cover; }
 
+.header_nav {
+  margin-left: 15%;
+  margin-top: 1%;
+  color: #dc7863;
+  font-weight: bolder; }
+
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #dc7863; }
+
+section {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 1%;
+  float: left;
+  border-style: double;
+  border-color: #c6d8cf;
+  border-width: 1.5rem; }
+
+h2 {
+  color: #e7c9b1;
+  font-weight: bolder; }
 
 /* Button styling, created by Will Woodgate, JSFiddle: https://jsfiddle.net/willwood/gjf139z4/5/ */
 i {
