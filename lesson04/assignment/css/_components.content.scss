@@ -124,7 +124,7 @@ i {
     font-size: 1rem;
     font-weight: bolder;
     text-decoration: none;
-    color: $orange;
+    transition: all 5s ease-in-out;
   }
   
   /*Stop pulse when hovering over button */

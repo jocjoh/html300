@@ -462,7 +462,7 @@ i {
   font-size: 1rem;
   font-weight: bolder;
   text-decoration: none;
-  color: #dc7863; }
+  transition: all 5s ease-in-out; }
 
 /*Stop pulse when hovering over button */
 a.hiButton:hover {
