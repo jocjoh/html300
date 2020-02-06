@@ -2,11 +2,12 @@
     font-family: $font;
 }
 
+/*Variable for background color of all pages*/
 body {
   background-color: $cream;
 }
 
-
+/*Clothing image as background is my own*/
 header {
     border-style: double;
     border-width: 1.5rem;
@@ -23,11 +24,13 @@ header {
     font-weight: bolder;
 }
 
+/*Remove special styling for links*/
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/*Styles for first content block*/
 .primary {
     margin-left: 15%;
     width: 40%;
@@ -39,14 +42,17 @@ a {
     border-width: 1rem;
     background-color: white;
 
+    /*media query for iPads, tablets*/
     @include medium-screen {
       width: 30%;
     }
 
+    /*media query for larger mobile screens*/
     @include small-screen {
       width: 60%;
     }
 
+    /*media query for small mobile screens*/
     @include extra-small-screen {
       width: 70%;
       margin-left: 10%;
@@ -69,10 +75,12 @@ h1 {
     border-width: 1rem;
     background-color: white;
 
+    /*media query for iPads, tablets*/
     @include medium-screen {
       width: 21%;
     }
 
+    /*media query for larger mobile screens*/
     @include small-screen {
       width: 60%;
       margin-right: none;
@@ -80,6 +88,7 @@ h1 {
       float: none;
     }
 
+    /*media query for small mobile screens*/
     @include extra-small-screen {
       width: 70%;
       margin-left: 10%;
@@ -91,16 +100,18 @@ h2 {
   font-weight: bolder;
 }
 
+/*Position pulsing button to the right inside sidebar*/
 .side-button {
     float: right;
 }
 
-/* Button styling, created by Will Woodgate, JSFiddle: https://jsfiddle.net/willwood/gjf139z4/5/ References also to this Codepen: in this Codepen by Ola: https://codepen.io/olam/pen/BkhGl?editors=1100*/
-
+/*Styling Font Awesome icon*/
 i {
     color: $orange;
     font-size: 2.5rem;
 }
+
+/* Button styling inspired by Will Woodgate, JSFiddle: https://jsfiddle.net/willwood/gjf139z4/5/ References also to this Codepen by Ola: https://codepen.io/olam/pen/BkhGl?editors=1100*/
 
 .hiButton {
     width: 3rem;
@@ -108,23 +119,21 @@ i {
     text-align: center;
     display: block;
     padding: 0.625rem;
-    box-shadow: 0 0 0 0#f6e3c4;
     border-radius: 50%;
-    animation: pulsing 4s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
     font-size: 1rem;
     font-weight: bolder;
     text-decoration: none;
     color: $orange;
-    transition: all 300ms ease-in-out;
   }
   
-  /*Remove pulsing effect when hovering */
+  /*Stop pulse when hovering over button */
   a.hiButton:hover {
     animation: none;
     color: #ffffff;
   }
   
-  /* Pulsing animation */
+  /* Pulsing transform */
   
     @keyframes pulsing {
       0% {
@@ -157,14 +166,17 @@ i {
     border-width: 1rem;
     background-color: white;
 
+    /*media query for iPads, tablets*/
     @include medium-screen {
       width: 30%;
     }
 
+    /*media query for larger mobile screens*/
     @include small-screen {
       width: 60%;
     }
 
+    /*media query for small mobile screens*/
     @include extra-small-screen {
       width: 70%;
       margin-left: 10%;
