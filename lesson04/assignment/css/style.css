@@ -357,6 +357,9 @@ th {
 * {
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+body {
+  background-color: #f6e3c4; }
+
 header {
   border-style: double;
   border-width: 1.5rem;
@@ -383,13 +386,24 @@ a {
   float: left;
   border-style: double;
   border-color: #c6d8cf;
-  border-width: 1.5rem; }
+  border-width: 1rem;
+  background-color: white; }
+  @media (max-width: 816px) {
+    .primary {
+      width: 30%; } }
+  @media (max-width: 530px) {
+    .primary {
+      width: 60%; } }
+  @media (max-width: 375px) {
+    .primary {
+      width: 70%;
+      margin-left: 10%; } }
 
 h1 {
   color: #e7c9b1;
   font-weight: bolder; }
 
-aside {
+.sidebar {
   margin-right: 15%;
   margin-top: 1%;
   padding: 1%;
@@ -397,18 +411,32 @@ aside {
   float: right;
   border-style: double;
   border-color: #c6d8cf;
-  border-width: 1.5rem; }
+  border-width: 1rem;
+  background-color: white; }
+  @media (max-width: 816px) {
+    .sidebar {
+      width: 21%; } }
+  @media (max-width: 530px) {
+    .sidebar {
+      width: 60%;
+      margin-right: none;
+      margin-left: 15%;
+      float: none; } }
+  @media (max-width: 375px) {
+    .sidebar {
+      width: 70%;
+      margin-left: 10%; } }
 
 h2 {
   color: #e7c9b1;
   font-weight: bolder; }
 
 .side-button {
-  padding-left: 5.625rem; }
+  float: right; }
 
-/* Button styling, created by Will Woodgate, JSFiddle: https://jsfiddle.net/willwood/gjf139z4/5/ */
+/* Button styling, created by Will Woodgate, JSFiddle: https://jsfiddle.net/willwood/gjf139z4/5/ References also to this Codepen: in this Codepen by Ola: https://codepen.io/olam/pen/BkhGl?editors=1100*/
 i {
-  color: #f6e3c4;
+  color: #dc7863;
   font-size: 2.5rem; }
 
 .hiButton {
@@ -419,12 +447,11 @@ i {
   padding: 0.625rem;
   box-shadow: 0 0 0 0 #f6e3c4;
   border-radius: 50%;
-  background-color: #dc7863;
-  animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulsing 4s infinite cubic-bezier(0.66, 0, 0, 1);
   font-size: 1rem;
   font-weight: bolder;
   text-decoration: none;
-  color: #f6e3c4;
+  color: #dc7863;
   transition: all 300ms ease-in-out; }
 
 /*Remove pulsing effect when hovering */
@@ -433,10 +460,19 @@ a.hiButton:hover {
   color: #ffffff; }
 
 /* Pulsing animation */
-
 @keyframes pulsing {
-  to {
-    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0); } }
+  0% {
+    opacity: 1;
+    transform: scale(0); }
+  30% {
+    opacity: 1;
+    transform: scale(0); }
+  70% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: scale(1); } }
 
 /*Styles for second content box on index page*/
 .secondary {
@@ -447,12 +483,25 @@ a.hiButton:hover {
   float: left;
   border-style: double;
   border-color: #c6d8cf;
-  border-width: 1.5rem; }
+  border-width: 1rem;
+  background-color: white; }
+  @media (max-width: 816px) {
+    .secondary {
+      width: 30%; } }
+  @media (max-width: 530px) {
+    .secondary {
+      width: 60%; } }
+  @media (max-width: 375px) {
+    .secondary {
+      width: 70%;
+      margin-left: 10%; } }
 
 /*Footer styles*/
 .footer {
   text-align: center;
-  color: #dc7863; }
+  color: #dc7863;
+  margin-top: 25%;
+  margin-right: 20%; }
   .footer__nav {
     display: inline-block;
     margin-left: 20%;
