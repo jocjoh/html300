@@ -1,13 +1,61 @@
-html {
-    box-sizing: border-box;
+.item1 {
+    grid-area: header;
+    background-color: rgb(241, 53, 43);
+    color: white;
 }
 
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
+.item2 {
+    grid-area: nav;
+    background-color: rgb(122, 203, 0);
+    color: white;
 }
 
-.main {
-    padding: 2rem;
+.item3 {
+    grid-area: content;
+    background-color: rgb(255, 102, 0);
+    color: white;
 }
+
+.item4 {
+    grid-area: sidebar;
+    background-color: rgb(110, 39, 197);
+    color: white;
+}
+
+.item5 {
+    grid-area: footer;
+    background-color: rgb(21, 15, 150);
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header'
+      'header header header header header header'
+      'nav nav nav nav nav nav'
+      'sidebar sidebar content content content content'
+      'sidebar sidebar content content content content'
+      'sidebar sidebar content content content content'
+      'sidebar sidebar content content content content'
+      'sidebar sidebar content content content content'
+      'sidebar sidebar content content content content'
+      'sidebar sidebar content content content content'
+      'sidebar sidebar content content content content'
+      'sidebar sidebar content content content content'
+      'footer footer footer footer footer footer'
+      'footer footer footer footer footer footer';
+    grid-gap: 0;
+}
+
+.grid-container {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
