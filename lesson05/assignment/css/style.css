@@ -355,28 +355,51 @@ th {
 
 .item1 {
   grid-area: header;
+  display: flex;
   background-color: #f1352b;
-  color: white; }
+  color: white;
+  justify-content: center;
+  padding: 3.5rem; }
 
 .item2 {
   grid-area: nav;
+  display: flex;
   background-color: #7acb00;
-  color: white; }
+  color: white;
+  justify-content: space-evenly;
+  padding: 1.5rem; }
 
 .item3 {
   grid-area: content;
+  display: flex;
   background-color: #ff6600;
-  color: white; }
+  color: white;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem; }
 
 .item4 {
   grid-area: sidebar;
+  display: flex;
   background-color: #6e27c5;
-  color: white; }
+  color: white;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem; }
 
 .item5 {
   grid-area: footer;
+  display: flex;
   background-color: #150f96;
-  color: white; }
+  color: white;
+  justify-content: center;
+  padding: 1.5rem; }
 
 .grid-container {
   display: grid;
@@ -385,8 +408,8 @@ th {
 
 .grid-container {
   text-align: center;
-  padding: 20px 0;
-  font-size: 30px; }
+  font-size: 30px;
+  width: 75rem; }
 
 a {
   text-decoration: none;
