@@ -353,6 +353,9 @@ td,
 th {
   padding: 0; }
 
+* {
+  font-family: HelveticaNeue, "Helvetica Neue"; }
+
 .item1 {
   grid-area: header;
   display: flex;
@@ -378,8 +381,8 @@ th {
   flex-direction: column;
   padding-left: 4rem;
   padding-right: 4rem;
-  padding-top: 7rem;
-  padding-bottom: 7rem; }
+  padding-top: 10rem;
+  padding-bottom: 10rem; }
 
 .item4 {
   grid-area: sidebar;
@@ -390,8 +393,8 @@ th {
   flex-direction: column;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 7rem;
-  padding-bottom: 7rem; }
+  padding-top: 10rem;
+  padding-bottom: 10rem; }
 
 .item5 {
   grid-area: footer;
@@ -408,7 +411,7 @@ th {
 
 .grid-container {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.875rem;
   width: 75rem; }
 
 a {
