@@ -60,7 +60,7 @@
     padding: 1.5rem;
 }
 
-//Create grid template
+//Create grid template and style container
 .grid-container {
     display: grid;
     grid-template-areas: 
@@ -79,10 +79,6 @@
       'footer footer footer footer footer footer'
       'footer footer footer footer footer footer';
     grid-gap: 0;
-}
-
-//Style grid container
-.grid-container {
     text-align: center;
     font-size: 1.875rem;
     width: 75rem;
