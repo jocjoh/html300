@@ -378,8 +378,8 @@ th {
   flex-direction: column;
   padding-left: 4rem;
   padding-right: 4rem;
-  padding-top: 6rem;
-  padding-bottom: 6rem; }
+  padding-top: 7rem;
+  padding-bottom: 7rem; }
 
 .item4 {
   grid-area: sidebar;
@@ -390,8 +390,8 @@ th {
   flex-direction: column;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 6rem;
-  padding-bottom: 6rem; }
+  padding-top: 7rem;
+  padding-bottom: 7rem; }
 
 .item5 {
   grid-area: footer;
