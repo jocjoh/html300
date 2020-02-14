@@ -1,9 +1,6 @@
 header {
-    border-style: solid;
-    border-width: 1rem;
-    border-color: white;
     height: 20rem;
-    background: url(header.jpg);
+    background: url(images/header2.jpg);
     background-size: cover;
 }
 
@@ -13,4 +10,18 @@ header {
 
 #homeFeature {
     width: 18rem;
+}
+
+.footer {
+    color: black;
+    background-color: #ffe6ff;
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.containerImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
