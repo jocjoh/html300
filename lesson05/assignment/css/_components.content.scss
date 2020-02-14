@@ -64,10 +64,10 @@
 .grid-container {
     display: grid;
     grid-template-areas: 
-      'header header header header header header'
-      'nav nav nav nav nav nav'
-      'sidebar sidebar content content content content'
-      'footer footer footer footer footer footer';
+      'header header header'
+      'nav nav nav'
+      'sidebar content content'
+      'footer footer footer';
     grid-gap: 0;
     text-align: center;
     font-size: 1.875rem;
