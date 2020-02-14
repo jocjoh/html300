@@ -12,11 +12,40 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     </head>
     <body>
+        <!--Header-->
         <header>
-
         </header>
-        <main class="main">
-          <h1>Tulip festival</h1>
-        </main>
+        <!--Bootstrap navbar created with reference: https://getbootstrap.com/docs/4.3/components/navbar/#nav-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+            <a class="navbar-brand text-danger" href="#">Tulip Fever</a>
+            <div class="navbar-nav">
+              <a class="nav-item nav-link text-danger active" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link text-danger" href="images.html">Images</a>
+              <a class="nav-item nav-link text-danger" href=grid.html>Grid</a>
+              <a class="nav-item nav-link text-danger" href="accordian.html">Accordian</a>
+            </div>
+        </nav>
+        <div class="container">
+          <!--Quote card, reference: https://getbootstrap.com/docs/4.3/components/card/-->
+          <div class="card m-3 float-left" id="quoteCard">
+              <div class="card-header">
+                Testimonial
+              </div>
+              <div class="card-body">
+                <blockquote class="blockquote">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                  <footer class="blockquote-footer">John Smith <cite title="Source Title">Salem, Ore</cite></footer>
+                </blockquote>
+              </div>
+          </div>
+          <!--Feature card-->
+          <div class="card m-3 float-right" id="homeFeature">
+              <div class="card-body">
+                <h5 class="card-title">Quality above the rest</h5>
+                <p class="card-text">Want to tulips for your house or garden? We have colors and shapes for every taste and budget.</p>
+                <a href="#" class="btn btn-danger">Buy tulips</a>
+              </div>
+          </div>
+        </div>
     </body>
 </html>

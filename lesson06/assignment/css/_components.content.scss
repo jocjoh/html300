@@ -1,8 +1,16 @@
 header {
     border-style: solid;
-    border-width: 1.5rem;
-    border-color: $mauve;
+    border-width: 1rem;
+    border-color: white;
     height: 20rem;
     background: url(header.jpg);
     background-size: cover;
+}
+
+#quoteCard {
+    width: 45rem;
+}
+
+#homeFeature {
+    width: 18rem;
 }
