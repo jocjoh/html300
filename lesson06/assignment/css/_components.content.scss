@@ -1,13 +1,8 @@
-html {
-    box-sizing: border-box;
-}
-
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
-}
-
-.main {
-    padding: 2rem;
+header {
+    border-style: solid;
+    border-width: 1.5rem;
+    border-color: $mauve;
+    height: 20rem;
+    background: url(header.jpg);
+    background-size: cover;
 }
