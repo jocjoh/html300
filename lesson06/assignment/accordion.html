@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Assignment 06 - Bootstrap 4</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!--Header-->
+        <header>
+        </header>
+        <!--Bootstrap navbar created with reference: https://getbootstrap.com/docs/4.3/components/navbar/#nav-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light m-3">
+            <a class="navbar-brand text-danger" href="#">Tulip Fever</a>
+            <div class="navbar-nav">
+              <a class="nav-item nav-link text-danger" href="index.html">Home</a>
+              <a class="nav-item nav-link text-danger" href="images.html">Images</a>
+              <a class="nav-item nav-link text-danger" href=grid.html>Grid</a>
+              <a class="nav-item nav-link text-danger active" href="#">Accordion<span class="sr-only">(current)</span></a>
+            </div>
+        </nav>
+
+        <div class="container">
+        <h2 class="m-3">Frequently asked questions</h2>
+
+        <div class="accordion m-3" id="accordion">
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                            Why is the Pacific Northwest a haven for tulips?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        The wet, moderate climate of the United States' Pacific Northwest allows for blah blah blah.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                            How do I safely transport my bulbs and flowers?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        blah blah blah...
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree">
+                            Where should I plant my tulip bulbs?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        blah blah blah...
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h2>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour">
+                            How long do fresh cut tulips last?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        blah blah blah...
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h2>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive">
+                            What sets Tulip Fever tulips above the rest?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseFive" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        blah blah blah...
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+        
+        
+    </body>
+</html>
