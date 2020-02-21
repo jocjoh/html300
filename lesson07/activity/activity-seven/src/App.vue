@@ -6,7 +6,7 @@
             <input type="text" placeholder="Enter your favorite color">
             <br>
             <br>
-            <button id="button1" type="submit" title="Click other button first" disabled="disabled">Submit</button>
+            <button id="button1" type="submit" title="Click other button first" disabled="disable">Submit</button>
             <button v-on:click="enable" type="button">Click me!</button>
         </div>
   </form>
@@ -17,7 +17,7 @@ export default {
   methods: {
     enable: function() {
       document.getElementById("button1").removeAttribute("disabled");
-      document.GetElementbyId("button1").removeAttribute("title");
+      document.getElementById("button1").removeAttribute("title");
     }
   }
 }
