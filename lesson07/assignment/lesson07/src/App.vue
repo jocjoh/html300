@@ -8,12 +8,12 @@
     <!--Bootstrap responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-light m-3">
       <a class="navbar-brand text-danger" href="#"><strong>Tulip Fever</strong></a>
-      <div class="navbar-nav">
-        <router-link to="components/HelloWorld" class="nav-item nav-link text-danger active">Home <span class="sr-only">(current)</span></router-link>
-        <router-link to="components/images" class="nav-item nav-link text-danger">Images</router-link>
-        <router-link to="components/grid" class="nav-item nav-link text-danger">Grid</router-link>
-        <router-link to="components/accordion" class="nav-item nav-link text-danger">Accordion</router-link>
-      </div>
+      <nav class="navbar-nav">
+        <router-link to="/HelloWorld" class="nav-item nav-link text-danger active">Home <span class="sr-only">(current)</span></router-link>
+        <router-link to="/Images" class="nav-item nav-link text-danger">Images</router-link>
+        <router-link to="/Grid" class="nav-item nav-link text-danger">Grid</router-link>
+        <router-link to="/Accordion" class="nav-item nav-link text-danger">Accordion</router-link>
+      </nav>
     </nav>
 
     <router-view></router-view>

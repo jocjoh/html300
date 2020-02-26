@@ -1,7 +1,8 @@
 <template>
+<div>
   <div class="container">
             <p>Visit us year-round to see what new and rare varieties are available.</p>
-        </div>
+  </div>
 
         <!--Boostrap grid responsive to xs, small, medium, large, xl sizes-->
         <div class="container">
@@ -33,8 +34,9 @@
             </div>
             
         </div>
-
-        <div style="clear: both;"></div>
+  </div>
+</div>
+        
 </template>
 
 <script>

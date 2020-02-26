@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import Images from '@/components/Images'
+import Grid from '@/components/Grid'
+import Accordion from '@/components/Accordion'
 
 Vue.use(Router)
 
-const Images = { template: '<div>images</div>' }
-const Grid = { template: '<div>grid</div>' }
-const Accordion = { template: '<div>accordion</div>' }
 
 export default new Router({
   routes: [
@@ -31,8 +31,8 @@ export default new Router({
       component: Accordion
     }
   ]
-
 })
+
 
 
 
