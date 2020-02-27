@@ -1,4 +1,5 @@
 <template>
+<body>
     <!--FAQ accordion-->
         <div class="container">
             <h2 class="m-3">Frequently asked questions</h2>
@@ -96,6 +97,9 @@
 
             </div>
         </div>
+
+        <div style="clear: both;"></div>
+</body>
         
 
 </template>

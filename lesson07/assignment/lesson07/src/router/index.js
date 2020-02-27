@@ -1,37 +1,42 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import Images from '@/components/Images'
-import Grid from '@/components/Grid'
-import Accordion from '@/components/Accordion'
+import images from '@/components/images'
+import grid from '@/components/grid'
+import accordion from '@/components/accordion'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-
-export default new Router({
-  routes: [
+const routes = [
     {
-      path: '/',
+      path: '/HelloWorld',
       name: 'HelloWorld',
       component: HelloWorld
     },
     {
-      path: '/',
-      name: 'Images',
-      component: Images
+      path: '/images',
+      name: 'images',
+      component: images
     },
     {
-      path: '/',
-      name: 'Grid',
-      component: Grid
+      path: '/grid',
+      name: 'grid',
+      component: grid
     },
     {
-      path: '/',
-      name: 'Accordion',
-      component: Accordion
+      path: '/accordion',
+      name: 'accordion',
+      component: accordion
     }
   ]
-})
+
+  const router = new VueRouter({
+    mode: 'history',
+    routes
+  })
+
+
+export default router
 
 
 

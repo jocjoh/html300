@@ -9,14 +9,14 @@
     <nav class="navbar navbar-expand-lg navbar-light m-3">
       <a class="navbar-brand text-danger" href="#"><strong>Tulip Fever</strong></a>
       <nav class="navbar-nav">
-        <router-link to="/HelloWorld" class="nav-item nav-link text-danger active">Home <span class="sr-only">(current)</span></router-link>
-        <router-link to="/Images" class="nav-item nav-link text-danger">Images</router-link>
-        <router-link to="/Grid" class="nav-item nav-link text-danger">Grid</router-link>
-        <router-link to="/Accordion" class="nav-item nav-link text-danger">Accordion</router-link>
+        <router-link to="/" class="nav-item nav-link text-danger active">Home <span class="sr-only">(current)</span></router-link>
+        <router-link to="/images" class="nav-item nav-link text-danger">Images</router-link>
+        <router-link to="/grid" class="nav-item nav-link text-danger">Grid</router-link>
+        <router-link to="/accordion" class="nav-item nav-link text-danger">Accordion</router-link>
       </nav>
     </nav>
 
-    <router-view></router-view>
+    <router-view/>
 
     <!--Basic footer-->
     <footer class="footer bg-light">
