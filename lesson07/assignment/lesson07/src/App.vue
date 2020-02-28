@@ -2,7 +2,7 @@
   <div id="app">
     <!--Header with responsive image-->
     <header>
-      <img class="img-fluid" src="assets/header2.JPG" alt="red tulips surrounded by purple tulips">
+      <img class="img-fluid" src="./assets/header2.jpg" alt="red tulips surrounded by purple tulips">
     </header>
 
     <!--Bootstrap responsive navbar-->
@@ -16,7 +16,7 @@
       </nav>
     </nav>
 
-    <router-view/>
+    <router-view />
 
     <!--Basic footer-->
     <footer class="footer bg-light">
@@ -33,6 +33,8 @@
 export default {
   name: 'App'
 }
+
+
 </script>
 
 <style>
