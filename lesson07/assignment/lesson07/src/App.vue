@@ -17,7 +17,8 @@
     </nav>
 
     <router-view />
-
+    
+    <div class="end"></div>
     <!--Basic footer-->
     <footer class="footer bg-light">
         <nav>
@@ -62,6 +63,10 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.end {
+  clear: both;
 }
 
 </style>

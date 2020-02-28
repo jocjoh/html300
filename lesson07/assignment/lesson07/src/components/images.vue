@@ -1,13 +1,16 @@
 <template>
   <body>
   <!--All photos taken by Joce Johnson-->
-  <!--Container with fluid images-->
+    <div class="container">
 
-        <div v-for="image in images">
-            <img :src="image.src" :caption="image.alt">
+        <div v-for="image in images" class="card">
+            <img :src="image.src" :alt="image.alt" class="card-img-top img-fluid rounded">
+            <div class="caption"> {{ image.caption }} </div>
+            <a href="#" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="right" title="Click here to buy">Buy</a>
         </div>
+    </div>
+        
 
-        <div style="clear: both;"></div>
   </body>
 </template>
 
@@ -24,12 +27,12 @@ var card6 = require('../assets/card6.jpg')
   data () {
     return {
     images: [
-      { src: card1, caption: 'field of red tulips' },
-      { src: card2, caption: 'white and yellow tulips' },
-      { src: card3, caption: 'Peach colored tulip surrounded by purple tulips' },
-      { src: card4, caption: 'closed purple tulip' },
-      { src: card5, caption: 'bright pink tulip' },
-      { src: card6, caption: 'yellow tulip with red edges' }
+      { src: card1, alt: 'field of red tulips', caption: 'Classic Red: Our most popular tulip, this classic is the quintessential sign of spring.' },
+      { src: card2, alt: 'white and yellow tulips', caption: 'Fire on the Mountain: With petals that look like flames, this tulip is only for the bold.' },
+      { src: card3, alt: 'Peach colored tulip surrounded by purple tulips', caption: 'Amethyst: If you love a splash of purple, this one is for you.' },
+      { src: card4, alt: 'closed purple tulip', caption: 'Peach Sunrise: One of our rare varieties, this tulip only makes an appearance every few years.' },
+      { src: card5, alt: 'bright pink tulip', caption: 'Scarlett Letter: This head-turner is great in a mixed bouquet for a vibrant pop of color.' },
+      { src: card6, alt: 'yellow tulip with red edges', caption: 'Snow Top: Can brighten up any room or corner of your garden.' }
     ]
   }
  }
@@ -39,8 +42,15 @@ var card6 = require('../assets/card6.jpg')
 
 <style scoped>
 
-img {
-  width: 40rem;
+
+.card {
+  width: 30rem;
+  margin-left: 20rem;
+  margin-bottom: 2rem;
+}
+
+.caption {
+  padding: 1rem;
 }
 
 </style>

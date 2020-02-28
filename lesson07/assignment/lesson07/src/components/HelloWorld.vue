@@ -1,7 +1,9 @@
 <template>
     <body>
+
       <!--Quote card-->
       <div class="container">
+
         <div class="card m-3 float-left" id="quoteCard">
           <div class="card-header">
             Testimonial
@@ -12,19 +14,19 @@
               <footer class="blockquote-footer">John Smith <cite title="Source Title">Salem, Ore</cite></footer>
             </blockquote>
           </div>
-          </div>
+        </div>
+
           <!--Feature card-->
           <div class="card m-3 float-right" id="homeFeature">
             <div class="card-body">
               <h5 class="card-title">Quality above the rest</h5>
               <p class="card-text">Want tulips for your house or garden? We have colors and shapes for every taste and budget.</p>
-              <!--Buy button with tooltip-->
-              <a href="images.html" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Click here to see buying options">Buy tulips</a>
+              <a href="/images" v-if="show" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="See more tulips!">Buy tulips</a>
+              <btn v-else v-on:click="show = !show" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="See more tulips!">Yes!</btn>
             </div>
           </div>
-        </div>
 
-        <div style="clear: both;"></div>
+        </div>
         
     </body>
 
@@ -35,7 +37,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      show: false,
     }
   }
 }
