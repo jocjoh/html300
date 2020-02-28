@@ -3,6 +3,7 @@
 
     <div class="container">
         <h2 class="m-3">Frequently asked questions</h2>
+        <!--Use v-for to populate accordion-->
         <div v-for="item in items" class="accordion" id="accordion">
             <div class="card"> 
               <div class="card-header" id="headingOne">

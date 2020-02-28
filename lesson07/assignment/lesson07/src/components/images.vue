@@ -2,7 +2,8 @@
   <body>
   <!--All photos taken by Joce Johnson-->
     <div class="container">
-
+        
+        <!--Use v-for to render loop through images-->
         <div v-for="image in images" class="card">
             <img :src="image.src" :alt="image.alt" class="card-img-top img-fluid rounded">
             <div class="caption"> {{ image.caption }} </div>
@@ -41,8 +42,6 @@ var card6 = require('../assets/card6.jpg')
 </script>
 
 <style scoped>
-
-
 .card {
   width: 30rem;
   margin-left: 20rem;

@@ -1,4 +1,5 @@
 <template>
+<!--Add header and footer to app.vue-->
   <div id="app">
     <!--Header with responsive image-->
     <header>
@@ -15,7 +16,8 @@
         <router-link to="/accordion" class="nav-item nav-link text-danger">Accordion</router-link>
       </nav>
     </nav>
-
+    
+    <!--Where each component content will render-->
     <router-view />
     
     <div class="end"></div>
@@ -35,10 +37,10 @@ export default {
   name: 'App'
 }
 
-
 </script>
 
 <style>
+<!--Styles to apply to every component-->
 .navbar {
     background-color: #e4cece;
 }

@@ -6,6 +6,7 @@
     </div>
 
         <!--Boostrap grid responsive to xs, small, medium, large, xl sizes-->
+        <!--Use v-for to loop populate grid-->
         <div v-for="item in items" class="container">
             <div class="row">
               <div class="d-flex col-xs-8 col-sm-11 col-md-11 col-lg-12 col-xl-12 p-5" style="background-color: #c7deec;">
