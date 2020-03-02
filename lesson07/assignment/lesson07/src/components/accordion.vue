@@ -42,7 +42,7 @@ data () {
     { faq: 'What sets Tulip Fever tulips above the rest?', answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
   ],
 
-  show: true,
+  show: false,
 }
 }
 }
