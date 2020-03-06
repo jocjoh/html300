@@ -1,21 +1,6 @@
-<template>
-  <body>
-  <!--All photos taken by Joce Johnson-->
-    <div class="container">
-        
-        <!--Use v-for to render loop through images-->
-        <div v-for="image in images" class="card">
-            <img :src="image.src" :alt="image.alt" class="card-img-top img-fluid rounded">
-            <div class="caption"> {{ image.caption }} </div>
-            <a href="#" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="right" title="Click here to buy">Buy</a>
-        </div>
-    </div>
-        
-
-  </body>
-</template>
-
 <script>
+import photos from './photos.vue';
+
 var card1 = require('../assets/card1.jpg');
 var card2 = require('../assets/card2.jpg');
 var card3 = require('../assets/card3.jpg');
@@ -23,10 +8,13 @@ var card4 = require('../assets/card4.jpg');
 var card5 = require('../assets/card5.jpg');
 var card6 = require('../assets/card6.jpg')
 
-  export default {
-  name: 'Images',
-  data () {
-    return {
+export default {
+name: 'Images',
+components: {
+  photos
+},
+data () {
+  return {
     images: [
       { src: card1, alt: 'field of red tulips', caption: 'Classic Red: Our most popular tulip, this classic is the quintessential sign of spring.' },
       { src: card2, alt: 'white and yellow tulips', caption: 'Fire on the Mountain: With petals that look like flames, this tulip is only for the bold.' },
@@ -40,6 +28,19 @@ var card6 = require('../assets/card6.jpg')
 }
 
 </script>
+
+<template>
+<div id="app">
+  <section v-if="images">
+    <photos
+     v-for="image in images"
+     v-bind:images="images"
+     v-bind:key="image.src"
+   >
+   </photos>
+   </section>
+</div>
+</template>
 
 <style scoped>
 .card {

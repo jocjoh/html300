@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import images from '@/components/images'
 import grid from '@/components/grid'
 import accordion from '@/components/accordion'
+import photos from '@/components/photos'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
       path: '/accordion',
       name: 'accordion',
       component: accordion
+    },
+    {
+      path: '/photos',
+      name: 'photos',
+      component: photos
     }
   ]
 
@@ -37,6 +43,7 @@ const routes = [
 
 
 export default router
+
 
 
 
