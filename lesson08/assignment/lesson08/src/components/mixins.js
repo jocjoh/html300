@@ -1,12 +1,21 @@
-const showHide = {
+export default {
+    created: function () {
+      console.log('checkout my mixin')
+    },
     data() {
-        return {
-            isHidden: false
-        }
+      return {
+          isHidden: false,
+          myVal: true
+      }
     },
     methods: {
         toggleShowHide() {
             this.isHidden = !this.isHidden;
+        },
+        myMethod() {
+            var element = document.getElementById("border");
+            element.classList.toggle("border");
+            console.log("MIXIN METHOD CALLED 🎺")
         }
     }
 }

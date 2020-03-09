@@ -1,5 +1,6 @@
 <script>
 import photos from './photos.vue';
+import mixins from './mixins';
 
 var card1 = require('../assets/card1.jpg');
 var card2 = require('../assets/card2.jpg');
@@ -10,6 +11,7 @@ var card6 = require('../assets/card6.jpg')
 
 export default {
 name: 'Images',
+mixins: [mixins],
 components: {
   photos
 },
@@ -31,18 +33,33 @@ data () {
 
 <template>
 <div id="app">
-  <section v-if="images">
-    <photos
-     v-for="image in images"
-     v-bind:images="images"
-     v-bind:key="image.src"
-   >
-   </photos>
-   </section>
+
+<section v-if="images">
+  <button v-if="myVal" @click="myMethod()">
+    Remove pretty border
+  </button>
+  </section>
+
+  <section>
+  <photos
+    v-for="image in images"
+    v-bind:images="images"
+    v-bind:key="image.src"
+   ></photos>
+  </section>
+
 </div>
 </template>
 
 <style scoped>
+button {
+  margin:3rem;
+  color: pink;
+  border-style: solid;
+  background-color: white;
+  position: absolute;
+}
+
 .card {
   width: 30rem;
   margin-left: 20rem;

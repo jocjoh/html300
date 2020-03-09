@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style>
-<!--Styles to apply to every component-->
+/*Styles to apply to every component*/
 .navbar {
     background-color: #e4cece;
 }
