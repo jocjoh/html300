@@ -24,7 +24,7 @@
               <p class="card-text">Want tulips for your house or garden? We have colors and shapes for every taste and budget.</p>
               <!--Add v-if and v-else to buttons-->
               <a href="/images" v-if="show" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="See more tulips!">Buy tulips</a>
-              <btn v-else v-on:click="show = !show" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="See more tulips!">Yes!</btn>
+              <button v-else v-on:click="show = !show" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="See more tulips!">Yes!</button>
             </div>
           </div>
 
@@ -47,7 +47,6 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>

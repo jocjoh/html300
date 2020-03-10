@@ -1,14 +1,17 @@
 <template>
 <!--Add header and footer to app.vue-->
   <div id="app">
-    <!--Header with responsive image-->
+
     <header>
-      <img class="img-fluid" src="./assets/header2.jpg" alt="red tulips surrounded by purple tulips">
+      <banner>
+        <h1 slot="firstLine">Tulip Fever</h1>
+        <h3 slot="secondLine">The icon of spring</h3>
+      </banner>
     </header>
 
     <!--Bootstrap responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-light m-3">
-      <a class="navbar-brand text-danger" href="#"><strong>Tulip Fever</strong></a>
+      <a class="navbar-brand text-danger" href="#"><strong>Welcome</strong></a>
       <nav class="navbar-nav">
         <router-link to="/" class="nav-item nav-link text-danger active">Home <span class="sr-only">(current)</span></router-link>
         <router-link to="/images" class="nav-item nav-link text-danger">Images</router-link>
@@ -33,16 +36,31 @@
 </template>
 
 <script>
+import banner from './components/banner.vue';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    banner
+  },
+  filters: {
+        myFilter(val) {
+          return
+            var text = 'Tulip Fever';
+            var upper = text.toUpperCase();
+        }
+    }
 }
 
 </script>
 
 <style>
 /*Styles to apply to every component*/
+header {
+  background-color: #e4cece;
+}
 .navbar {
-    background-color: #e4cece;
+    background-color: white;
 }
 
 #quoteCard {

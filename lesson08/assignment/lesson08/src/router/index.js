@@ -5,6 +5,7 @@ import images from '@/components/images'
 import grid from '@/components/grid'
 import accordion from '@/components/accordion'
 import photos from '@/components/photos'
+import banner from '@/components/banner'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
       path: '/photos',
       name: 'photos',
       component: photos
+    },
+    {
+      path: '/banner',
+      name: 'banner',
+      component: banner
     }
   ]
 
