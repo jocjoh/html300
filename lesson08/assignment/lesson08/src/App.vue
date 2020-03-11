@@ -3,13 +3,14 @@
   <div id="app">
 
     <header>
+      <!--Implement banner component and slots-->
       <banner>
         <h1 slot="firstLine">Tulip Fever</h1>
         <h3 slot="secondLine">The icon of spring</h3>
       </banner>
     </header>
 
-    <!--Bootstrap responsive navbar-->
+    <!--Bootstrap responsive navbar with router-->
     <nav class="navbar navbar-expand-lg navbar-light m-3">
       <a class="navbar-brand text-danger" href="#"><strong>Welcome</strong></a>
       <nav class="navbar-nav">
@@ -42,14 +43,8 @@ export default {
   name: 'App',
   components: {
     banner
-  },
-  filters: {
-        myFilter(val) {
-          return
-            var text = 'Tulip Fever';
-            var upper = text.toUpperCase();
-        }
-    }
+  }
+  
 }
 
 </script>

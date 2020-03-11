@@ -1,9 +1,10 @@
 <template>
   <body>
 
-  <!--All photos taken by Joce Johnson-->
+    <!--All photos taken by Joce Johnson-->
+    <!--Markup for photos component-->
     <div class="container">
-        <!--Use v-for to render loop through images-->
+        <!--Use v-for to render loop through images and use Bootstrap to create card-->
         <div v-for="image in images" class="card">
             <div class="border" id="border">
               <img id="img" :src="image.src" :alt="image.alt" class="card-img-top img-fluid rounded">
@@ -17,7 +18,7 @@
 </template>
 
 <script>
-
+//Prop validation for component
 export default {
     name: 'photos',
     props: {

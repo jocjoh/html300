@@ -2,6 +2,7 @@
 import photos from './photos.vue';
 import mixins from './mixins';
 
+//Create variable paths for images
 var card1 = require('../assets/card1.jpg');
 var card2 = require('../assets/card2.jpg');
 var card3 = require('../assets/card3.jpg');
@@ -9,6 +10,7 @@ var card4 = require('../assets/card4.jpg');
 var card5 = require('../assets/card5.jpg');
 var card6 = require('../assets/card6.jpg')
 
+//Images object and data
 export default {
 name: 'Images',
 mixins: [mixins],
@@ -34,12 +36,14 @@ data () {
 <template>
 <div id="app">
 
+<!--Button mixin to remove border from image-->
 <section v-if="images">
   <button v-if="myVal" @click="myMethod()">
     Remove pretty border
   </button>
 </section>
 
+<!--Place photos component on images page-->
 <section>
   <photos
     v-for="image in images"
