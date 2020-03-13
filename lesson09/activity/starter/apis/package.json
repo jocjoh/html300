@@ -1,15 +1,21 @@
 {
-  "name": "my-app",
+  "name": "apis",
   "version": "1.0.0",
   "description": "Nuxt.js project",
   "author": "Bryce Benson <bryce@graphiti.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=master --cleanup",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.4.1",
-    "nuxt": "^2.11.0",
+    "nuxt": "^2.0.0",
     "push-dir": "^0.4.1"
   },
   "devDependencies": {
