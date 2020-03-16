@@ -44,7 +44,7 @@ data () {
 </section>
 
 <!--Place photos component on images page-->
-<section>
+<section class="container" v-if="images">
   <photos
     v-for="image in images"
     v-bind:images="images"
