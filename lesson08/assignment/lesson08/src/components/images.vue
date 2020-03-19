@@ -47,9 +47,9 @@ data () {
 <section class="container" v-if="images">
   <photos
     v-for="image in images"
-    v-bind:images="images"
-    v-bind:key="image.src"
-   ></photos>
+    :images="images"
+    :key="image.src"
+   />
 </section>
 
 </div>

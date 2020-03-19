@@ -5,8 +5,8 @@
     <!--Markup for photos component-->
     <div class="container">
         <div v-for="image in images" class="card">
-            <div class="border" id="border">
-              <img id="img" :src="image.src" :alt="image.alt" class="card-img-top img-fluid rounded">
+            <div class="frame" id="border">
+              <img :src="image.src" :alt="image.alt" class="card-img-top img-fluid rounded">
             </div>
             <div class="caption"> {{ image.caption }} </div>
             <a href="#" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="right" title="Click here to buy">Buy</a>
@@ -21,12 +21,11 @@
 export default {
     name: 'photos',
     props: {
-        images: {
-            type: Array,
+        images: Object,
             default: function () {
-                return []
+                return {}
             }
-        }
+        
     }
 }
 
@@ -44,7 +43,7 @@ export default {
   margin: 0.3rem;
 }
 
-.border {
+.frame {
   padding: 0.3rem;
   background-color: #e4cece;
 }
