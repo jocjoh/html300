@@ -45,12 +45,12 @@ data () {
 
 <!--Place photos component on images page-->
 <section class="container" v-if="images">
-  <photos
-    v-for="image in images"
-    :images="images"
-    :key="image.src"
-   />
-</section>
+   <photos
+     v-for="image in images"
+     :image="image"
+     :key="image.src"
+    />
+ </section>
 
 </div>
 </template>

@@ -14,7 +14,7 @@ export default {
         },
         myMethod() {
             var element = document.getElementById("border");
-            element.classList.toggle("frame");
+            element.classList.toggle("frame"); 
             console.log("MIXIN METHOD CALLED 🎺")
         }
     }

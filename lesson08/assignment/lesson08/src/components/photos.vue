@@ -4,10 +4,8 @@
     <!--All photos taken by Joce Johnson-->
     <!--Markup for photos component-->
     <div class="container">
-        <div v-for="image in images" class="card">
-            <div class="frame" id="border">
-              <img :src="image.src" :alt="image.alt" class="card-img-top img-fluid rounded">
-            </div>
+        <div class="card">
+            <img :src="image.src" :alt="image.alt" id="border" class="frame card-img-top img-fluid rounded">
             <div class="caption"> {{ image.caption }} </div>
             <a href="#" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="right" title="Click here to buy">Buy</a>
         </div>
@@ -21,7 +19,7 @@
 export default {
     name: 'photos',
     props: {
-        images: Object,
+        image: Object,
             default: function () {
                 return {}
             }
