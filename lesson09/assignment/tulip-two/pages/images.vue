@@ -44,13 +44,13 @@ data () {
 </section>
 
 <!--Place photos component on images page-->
-<section class="container" v-if="images">
-   <photos
-     v-for="image in images"
-     :image="image"
-     :key="image.src"
-    />
- </section>
+  <section v-if="images" class="flex-container">
+    <photos
+      v-for="image in images"
+      :image="image"
+      :key="image.src"
+      />
+  </section>
 
 </div>
 </template>
@@ -64,10 +64,13 @@ button {
   position: relative;
 }
 
-.card {
-  width: 30rem;
-  margin-left: 20rem;
-  margin-bottom: 2rem;
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: space-around;
+  justify-content: center;
+  margin: 3rem;
 }
 
 .caption {

@@ -1,17 +1,11 @@
 <template>
-  <body>
-
-    <!--All photos taken by Joce Johnson-->
+    <!--Tulip photos by Joce Johnson-->
     <!--Markup for photos component-->
-    <div class="container">
         <div class="card">
             <img :src="image.src" :alt="image.alt" id="border" class="frame card-img-top img-fluid rounded">
             <div class="caption"> {{ image.caption }} </div>
             <a href="#" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="right" title="Click here to buy">Buy</a>
         </div>
-    </div>
-        
-  </body>
 </template>
 
 <script>
@@ -30,15 +24,9 @@ export default {
 </script>
 
 <style scoped>
-
-.container {
-  display: flex;
-  flex-flow: row wrap;
-}
-
 .card {
   width: 30rem;
-  margin: 0.3rem;
+  margin: 0.5rem;
 }
 
 .frame {
