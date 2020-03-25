@@ -15,9 +15,9 @@
       <a class="navbar-brand" href="#"><strong>Welcome</strong></a>
       <nav class="navbar-nav">
         <nuxt-link to="/HelloWorld" class="nav-item nav-link active">Home <span class="sr-only">(current)</span></nuxt-link>
-        <nuxt-link to="/images" class="nav-item nav-link">Images</nuxt-link>
-        <nuxt-link to="/grid" class="nav-item nav-link">Grid</nuxt-link>
-        <nuxt-link to="/accordion" class="nav-item nav-link">Accordion</nuxt-link>
+        <nuxt-link to="/images" class="nav-item nav-link">Varieties</nuxt-link>
+        <nuxt-link to="/grid" class="nav-item nav-link">Hours</nuxt-link>
+        <nuxt-link to="/accordion" class="nav-item nav-link">FAQs</nuxt-link>
       </nav>
     </nav>
 
@@ -26,11 +26,11 @@
     
     <div class="end"></div>
     <!--Basic footer-->
-    <footer class="footer bg-light">
+    <footer class="footer">
         <nav>
-          Tulip Fever<br>
+          The Tulip Moment<br>
           2000 Spring Lane, Salem, OR 97302<br>
-          tulips@gmail.com
+          hello@tulipmoment.com
         </nav>
     </footer>
   </div>
@@ -65,7 +65,7 @@ export default {
 
 .footer {
     color: black;
-    background-color: #ffe6ff;
+    background-color: #F6F1EE;
     margin-top: 2rem;
     padding: 1rem;
     text-align: center;

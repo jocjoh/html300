@@ -38,6 +38,7 @@
           <div class="card-body">
             <h5 class="card-title">What we do</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           </div>
         </div>
 
@@ -47,8 +48,37 @@
             <h5 class="card-title">Quality above the rest</h5>
             <p class="card-text">Want tulips for your house or garden? We have colors and shapes for every taste and budget.</p>
             <!--Add v-if and v-else to buttons-->
-            <a href="/images" v-if="show" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="See more tulips!">Buy tulips</a>
+            <a href="/images" v-if="show" class="btn" data-toggle="tooltip" data-placement="right" title="See more tulips!">Buy tulips</a>
             <button v-else v-on:click="show = !show" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="See more tulips!">Yes!</button>
+            
+            <div id="flowers" class="carousel slide" data-ride="carousel">
+
+              <ol class="carousel-indicators">
+                <li data-target="#flowers" data-slide-to="0"></li>
+                <li data-target="#flowers" data-slide-to="1" class="active"></li>
+                <li data-target="#flowers" data-slide-to="2"></li>
+              </ol>
+
+              <div class="carousel-inner">
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="/card1.JPG" alt="First slide">
+                </div>
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="/card2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="/card3.jpg" alt="Third slide">
+                </div>
+              </div>
+
+              <a class="carousel-control-prev" href="#flowers" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#flowers" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+
           </div>
         </div>
 
@@ -69,6 +99,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 .helloBox {
   display: flex;
   flex-flow: row wrap;
@@ -80,6 +112,7 @@ export default {
     display: flex;
     flex-flow: row wrap;
     width: 20rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 #missionCard {
@@ -95,13 +128,33 @@ export default {
 }
 
 .card-header {
-    color: #5583A6;
+    color: #EFA885;
+}
+
+.card-title {
+    color: #EFA885;
 }
 
 #homeFeature {
     width: 18rem;
+    height: 25rem;
     font-family: 'Roboto', sans-serif;
     margin-top: 1rem;
 }
+
+.btn {
+  background-color: #FBDCCE;
+  border-style: none;
+
+}
+
+#flowers {
+    margin-top: 2rem;
+}
+
+.carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
 
 </style>

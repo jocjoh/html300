@@ -28,13 +28,58 @@ export default {
   position: absolute;
   top: 50%;
   left: 30%;
-  width: 100%;
   color: #FBDCCE;
+}
+
+@media screen and (max-width: 1800px) {
+  .logo-and-title {
+    top: 20%;
+  }
+}
+
+@media screen and (max-width: 1590px) {
+  .logo-and-title {
+    top: 20%;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .logo-and-title {
+    top: 20%;
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logo-and-title {
+    top: 20%;
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logo-and-title {
+    top: 8%;
+    left: 5%;
+  }
 }
 
 .title {
   font-size: 10rem;
   font-family: 'Lobster', cursive;
+}
+
+@media screen and (max-width: 1800px) {
+  .title {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 3.5rem;
+  }
 }
 
 .subtitle {
@@ -44,10 +89,11 @@ export default {
   font-style: italic;
 }
 
-/*.bouquet-logo {
-  width: 10rem;
-  color: #FBDCCE;
+@media screen and (max-width: 800px) {
+  .subtitle {
+    display: none;
+  }
 }
-*/
+
 
 </style>
