@@ -1,6 +1,7 @@
 <template>
-      <!--Quote card-->
+      
       <div class="helloBox">
+        <!--Quote card-->
         <div class="testimonials">
           <div class="card float-left" id="quoteCard">
             <!--Card header-->
@@ -40,34 +41,54 @@
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           </div>
+          <div class="grid-wrapper">
+            <div class="row">
+              <div class="column">
 
-          <div id="flowers" class="carousel slide" data-ride="carousel">
-
-              <ol class="carousel-indicators">
-                <li data-target="#flowers" data-slide-to="0"></li>
-                <li data-target="#flowers" data-slide-to="1" class="active"></li>
-                <li data-target="#flowers" data-slide-to="2"></li>
-              </ol>
-
-              <div class="carousel-inner">
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/card1.JPG" alt="First slide">
+                <div class="zoom">
+                  <img class="zoom-pic" src="/card1.JPG">
                 </div>
-                <div class="carousel-item active">
-                  <img class="d-block w-100" src="/card2.jpg" alt="Second slide">
+
+                <div class="zoom">
+                  <img class="zoom-pic"src="/card2.jpg">
                 </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/card3.jpg" alt="Third slide">
+
+                <div class="zoom">
+                  <img class="zoom-pic" src="/card3.jpg">
+                </div>
+
+              </div>
+              <div class="column">
+                <div class="zoom">
+                  <img class="zoom-pic" src="/card4.jpg">
+                </div>
+
+                <div class="zoom">
+                  <img class="zoom-pic"src="/card5.jpg">
+                </div>
+
+                <div class="zoom">
+                  <img class="zoom-pic" src="/card6.jpg">
                 </div>
               </div>
+              <div class="column">
 
-              <a class="carousel-control-prev" href="#flowers" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-              </a>
-              <a class="carousel-control-next" href="#flowers" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-              </a>
+              <div class="zoom">
+                  <img class="zoom-pic" src="/IMG_6082.jpg">
+                </div>
+
+                <div class="zoom">
+                  <img class="zoom-pic"src="/IMG_6063.jpg">
+                </div>
+
+                <div class="zoom">
+                  <img class="zoom-pic" src="/IMG_6120.jpg">
+                </div>
+                
+              </div>
             </div>
+          </div>
+
         </div>
 
         <!--Feature card-->
@@ -80,11 +101,11 @@
             <button v-else v-on:click="show = !show" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="See more tulips!">Yes!</button>
           </div>
         </div>
-
       </div>
 </template>
 
 <script>
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -118,6 +139,59 @@ export default {
     width: 45rem;
     font-family: 'Roboto', sans-serif;
     margin: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.column {
+  flex: 30%;
+  max-width: 30%;
+  padding: 0.3rem;
+  align-content: center;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.zoom {
+  text-align: center;
+}
+
+.zoom .zoom-pic {
+  width: 80%;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.zoom .zoom-pic:hover {
+  width: 100%;
 }
 
 #quoteCard {

@@ -7,7 +7,7 @@
     <!--PNG logo found on Create Commons site: https://www.pngrepo.com/svg/59571/bouquet-of-flowers-->
     <!--img class="bouquet-logo" src="../static/bouquet-of-flowers.png" alt="Tulips logo"-->
     <div class="title">The Tulip Moment</div>
-    <div class="subtitle">An aura of spring, year-round.</div>
+    <div class="subtitle">Have spring year-round.</div>
   </div>
 </div>
 

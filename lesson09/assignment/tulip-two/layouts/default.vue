@@ -15,7 +15,7 @@
       <a class="navbar-brand" href="#"><strong>Welcome</strong></a>
       <nav class="navbar-nav">
         <nuxt-link to="/HelloWorld" class="nav-item nav-link active">Home <span class="sr-only">(current)</span></nuxt-link>
-        <nuxt-link to="/images" class="nav-item nav-link">Varieties</nuxt-link>
+        <nuxt-link to="/images" class="nav-item nav-link">Shop</nuxt-link>
         <nuxt-link to="/grid" class="nav-item nav-link">Hours</nuxt-link>
         <nuxt-link to="/accordion" class="nav-item nav-link">FAQs</nuxt-link>
       </nav>
