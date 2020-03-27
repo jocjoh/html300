@@ -51,5 +51,15 @@ data () {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+  color: #E7C9B1;
+  font-family: 'Roboto', sans-serif;
+}
 
 </style>

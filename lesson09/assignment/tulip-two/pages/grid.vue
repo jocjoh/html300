@@ -1,7 +1,7 @@
 <template>
 <body>
   <div>
-    <div class="container">
+    <div class="headline">
       <p>Visit us year-round to see what new and rare varieties are available.</p>
     </div>
 
@@ -9,8 +9,8 @@
         <!--Use v-for to loop populate grid-->
         <div v-for="item in items" class="container">
             <div class="row">
-              <div class="d-flex col-xs-8 col-sm-11 col-md-11 col-lg-12 col-xl-12 p-5" style="background-color: #c7deec;">
-                <div class="flex-fill m-2">{{ item.season }}</div>
+              <div class="d-flex col-xs-8 col-sm-11 col-md-11 col-lg-12 col-xl-12 p-5">
+                <div class="flex-fill m-2" id="season">{{ item.season }}</div>
                 <div class="flex-fill m-2">{{ item.months }}</div>
                 <div class="flex-fill m-2">{{ item.hours }}</div>
               </div>
@@ -38,6 +38,29 @@
 </script>
 
 <style>
-  
+
+.headline {
+  margin-left: 15%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background-color: #DFBBB6;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.d-flex {
+  border-style: solid;
+  border-color: white;
+}
+
+#season {
+  font-size: 2rem;
+  font-family: 'Lobster', cursive;
+
+}
   
 </style>

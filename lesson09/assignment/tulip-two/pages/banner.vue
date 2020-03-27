@@ -82,6 +82,18 @@ export default {
   }
 }
 
+@media screen and (max-width: 420px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 307px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
 .subtitle {
   font-size: 2rem;
   margin-left: 10%;

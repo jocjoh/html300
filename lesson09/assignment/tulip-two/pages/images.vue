@@ -20,12 +20,12 @@ components: {
 data () {
   return {
     images: [
-      { src: card1, alt: 'field of red tulips', caption: 'Classic Red: Our most popular tulip, this classic is the quintessential sign of spring.' },
-      { src: card2, alt: 'white and yellow tulips', caption: 'Fire on the Mountain: With petals that look like flames, this tulip is only for the bold.' },
-      { src: card3, alt: 'Peach colored tulip surrounded by purple tulips', caption: 'Amethyst: If you love a splash of purple, this one is perfect for your home or as a gift.' },
-      { src: card4, alt: 'closed purple tulip', caption: 'Peach Sunrise: One of our rare varieties, this tulip only makes an appearance every few years.' },
-      { src: card5, alt: 'bright pink tulip', caption: 'Scarlett Letter: This head-turner is great in a mixed bouquet for a vibrant pop of color.' },
-      { src: card6, alt: 'yellow tulip with red edges', caption: 'Snow Top: This elegent and clean variety can brighten up any room or corner of your garden.' }
+      { src: card1, alt: 'field of red tulips', name: 'Classic Red', caption: 'Our most popular tulip, this classic is the quintessential sign of spring.' },
+      { src: card2, alt: 'white and yellow tulips', name: 'Fire on the Mountain', caption: 'With petals that look like flames, this variety is only for the bold.' },
+      { src: card3, alt: 'Peach colored tulip surrounded by purple tulips', name: 'Amethyst', caption: 'If you love a splash of purple, this one is perfect for your home or as a gift.' },
+      { src: card4, alt: 'closed purple tulip', name: 'Peach Sunrise', caption: 'One of our rare varieties, this tulip only makes an appearance every few years.' },
+      { src: card5, alt: 'bright pink tulip', name: 'Scarlett Letter', caption: 'This head-turner is great in a mixed bouquet for a vibrant pop of color.' },
+      { src: card6, alt: 'yellow tulip with red edges', name: 'Snow Top', caption: 'This elegent and clean variety can brighten up any room or corner of your garden.' }
     ]
   }
  }
@@ -36,12 +36,12 @@ data () {
 <template>
 <div id="app">
 
-<!--Button mixin to remove border from image-->
+<!--Button mixin to remove border from image
 <section v-if="images">
   <button v-if="myVal" @click="myMethod()">
     Remove pretty border
   </button>
-</section>
+</section>-->
 
 <!--Place photos component on images page-->
   <section v-if="images" class="flex-container">
