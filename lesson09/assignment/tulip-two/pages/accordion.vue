@@ -1,7 +1,7 @@
 <template>
 <body>
 
-    <div class="container">
+    <div class="faq-container">
         <h2 class="m-3">Frequently asked questions</h2>
         <!--Use v-for to populate accordion-->
         <div v-for="item in items" class="accordion" id="accordion">
@@ -52,6 +52,10 @@ data () {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+.faq-container {
+  margin: 3rem;
+}
 
 h2 {
   font-family: 'Roboto', sans-serif;

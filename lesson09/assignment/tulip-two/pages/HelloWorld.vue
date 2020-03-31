@@ -39,42 +39,45 @@
           <div class="card-body">
             <h5 class="card-title">What we do</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p class="card-text">Want tulips for your house or garden? We have colors and shapes for every taste and budget.</p>
+            <!--Add v-if and v-else to buttons-->
+            <a href="/images" v-if="show" class="btn" data-toggle="tooltip" data-placement="right" title="See more tulips!">Buy tulips</a>
+            <button v-else v-on:click="show = !show" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="See more tulips!">Yes!</button>
           </div>
           <div class="grid-wrapper">
             <div class="row">
               <div class="column">
 
                 <div class="zoom">
-                  <img class="zoom-pic" src="/card1.JPG">
+                  <img class="zoom-pic" src="/IMG_6033.jpg">
                 </div>
 
                 <div class="zoom">
-                  <img class="zoom-pic"src="/card2.jpg">
+                  <img class="zoom-pic"src="/IMG_6156.jpg">
                 </div>
 
                 <div class="zoom">
-                  <img class="zoom-pic" src="/card3.jpg">
+                  <img class="zoom-pic" src="/IMG_6170.jpg">
                 </div>
 
               </div>
               <div class="column">
                 <div class="zoom">
-                  <img class="zoom-pic" src="/card4.jpg">
+                  <img class="zoom-pic" src="/IMG_6194.jpg">
                 </div>
 
                 <div class="zoom">
-                  <img class="zoom-pic"src="/card5.jpg">
+                  <img class="zoom-pic"src="/IMG_6082.jpg">
                 </div>
 
                 <div class="zoom">
-                  <img class="zoom-pic" src="/card6.jpg">
+                  <img class="zoom-pic" src="/IMG_6249.jpg">
                 </div>
               </div>
               <div class="column">
 
               <div class="zoom">
-                  <img class="zoom-pic" src="/IMG_6082.jpg">
+                  <img class="zoom-pic" src="/IMG_6246.jpg">
                 </div>
 
                 <div class="zoom">
@@ -94,25 +97,46 @@
         <!--Feature card-->
         <div class="card float-right" id="homeFeature">
           <div class="card-body">
-            <h5 class="card-title">Quality above the rest</h5>
-            <p class="card-text">Want tulips for your house or garden? We have colors and shapes for every taste and budget.</p>
-            <!--Add v-if and v-else to buttons-->
-            <a href="/images" v-if="show" class="btn" data-toggle="tooltip" data-placement="right" title="See more tulips!">Buy tulips</a>
-            <button v-else v-on:click="show = !show" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="See more tulips!">Yes!</button>
+            <h5 class="card-title">The latest on gardening</h5>
+
+            <div class="api-container">
+              <div v-for="item in items" :key="item.name">
+                <h3> {{ item.name }} </h3>
+                <p> {{ item.title }} </p>
+                <img :src="item.urlToImage">
+              </div> 
+              <a href="NewsAPI.org">Powered by News API</a> 
+            </div>
+
           </div>
         </div>
       </div>
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
   name: 'HelloWorld',
-  data () {
+  data (){
     return {
-      msg: 'Welcome to Your Vue.js App',
-      show: false,
+      items: [],
+      errorMessage: undefined
     }
+  },
+  mounted() {
+    console.log("I'm mounted!")
+
+    axios
+      .get('https://newsapi.org/v2/everything?q=garden&apiKey=ce4b66f1e64b4c748b3fc0ee457acb23', { params: { limit:3, size:"full" } } )
+      .then(response => {
+        console.log('A response', response)
+        this.items = response.data
+      })
+      .catch(err=>{
+        console.error('whoops', response)
+        this.errorMessage = "oops we have an error"
+      })
   }
 }
 
@@ -135,10 +159,40 @@ export default {
     font-family: 'Roboto', sans-serif;
 }
 
+#quoteCard {
+    width: 20rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  #quoteCard {
+    display: none;
+  }
+}
+
 #missionCard {
     width: 45rem;
     font-family: 'Roboto', sans-serif;
     margin: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  #missionCard {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #missionCard {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #missionCard {
+    width: 80%;
+  }
 }
 
 .row {
@@ -165,7 +219,7 @@ export default {
 @media screen and (max-width: 800px) {
   .column {
     flex: 50%;
-    max-width: 50%;
+    max-width: 30%;
   }
 }
 
@@ -182,22 +236,11 @@ export default {
 
 .zoom .zoom-pic {
   width: 80%;
- 
-  -webkit-transition: all 1s ease;
-     -moz-transition: all 1s ease;
-       -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-          transition: all 1s ease;
+  transition: all 0.5s linear;
 }
  
 .zoom .zoom-pic:hover {
   width: 100%;
-}
-
-#quoteCard {
-    width: 20rem;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 1rem;
 }
 
 .card-header {
@@ -210,9 +253,22 @@ export default {
 
 #homeFeature {
     width: 18rem;
-    height: 25rem;
+    height: 50%;
     font-family: 'Roboto', sans-serif;
     margin-top: 1rem;
+}
+
+@media screen and (max-width: 1374px) {
+  #homeFeature {
+    width: 55rem;
+    margin: 1rem;
+  }
+}
+
+
+.api-container img{
+  width: 80%;
+  margin: 1rem;
 }
 
 .btn {
