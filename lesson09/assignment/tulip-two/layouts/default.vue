@@ -4,10 +4,7 @@
 
     <header>
       <!--Implement banner component-->
-      <banner>
-        <h1 slot="firstLine">Tulip Fever</h1>
-        <h3 slot="secondLine">The icon of spring</h3>
-      </banner>
+      <banner />
     </header>
 
     <!--Bootstrap responsive navbar with router-->

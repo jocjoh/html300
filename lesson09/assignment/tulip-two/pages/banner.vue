@@ -70,15 +70,15 @@ export default {
   font-family: 'Lobster', cursive;
 }
 
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1200px) {
   .title {
-    font-size: 5rem;
+    font-size: 8rem;
   }
 }
 
 @media screen and (max-width: 800px) {
   .title {
-    font-size: 3.5rem;
+    font-size: 6rem;
   }
 }
 

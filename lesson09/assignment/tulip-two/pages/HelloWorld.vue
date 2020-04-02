@@ -99,12 +99,12 @@
           <div class="card-body">
             <h5 class="card-title">The latest on gardening</h5>
 
-            <div class="api-container">
-              <div v-for="item in items" :key="item.name">
-                <h3> {{ item.name }} </h3>
-                <p> {{ item.title }} </p>
-                <img :src="item.urlToImage">
-              </div> 
+            <div class="api-container" v-if="items">
+              <api
+                v-for="item of items"
+                :key="item.id"
+                :item="item"              
+              /> 
               <a href="NewsAPI.org">Powered by News API</a> 
             </div>
 
@@ -114,32 +114,36 @@
 </template>
 
 <script>
+import api from '../pages/api.vue'
 import axios from 'axios'
 
 export default {
   name: 'HelloWorld',
+  components: {
+    api
+  },
   data (){
     return {
+      loading: true,
       items: [],
       errorMessage: undefined
     }
   },
   mounted() {
     console.log("I'm mounted!")
-
+    axios.defaults.headers.common['x-api-key'] = "ce4b66f1e64b4c748b3fc0ee457acb23"
     axios
-      .get('https://newsapi.org/v2/everything?q=garden&apiKey=ce4b66f1e64b4c748b3fc0ee457acb23', { params: { limit:3, size:"full" } } )
+      .get('https://newsapi.org/v2/everything?q=garden&apiKey=ce4b66f1e64b4c748b3fc0ee457acb23')
       .then(response => {
-        console.log('A response', response)
-        this.items = response.data
+        console.log('There is a response here', response)
+        (this.items = response.data)
       })
       .catch(err=>{
-        console.error('whoops', response)
+        console.error('uh oh something is wrong', response)
         this.errorMessage = "oops we have an error"
       })
   }
 }
-
 </script>
 
 <style scoped>
