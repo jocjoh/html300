@@ -1,8 +1,8 @@
 <template>
-    
+
     <div class="flex-item">
         <h6> {{ item.source.name }} </h6>
-        <a href="item.url"> {{ item.title }} </a>
+        <a :href="item.url"> {{ item.title }} </a>
         <p><img :src="item.urlToImage"></p>
     </div>
     
