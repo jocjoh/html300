@@ -4,6 +4,7 @@
         <h6> {{ item.source.name }} </h6>
         <a :href="item.url"> {{ item.title }} </a>
         <p><img :src="item.urlToImage"></p>
+        <p> {{ item.author }} </p>
     </div>
     
 </template>

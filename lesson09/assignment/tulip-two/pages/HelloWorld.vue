@@ -38,7 +38,7 @@
         <div class="card" id="missionCard">
           <div class="card-body">
             <h5 class="card-title">What we do</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p class="card-text">Light, bright, easy to care for. Those are just a few of the many reasons people love having tulips in the homes and gardens. But why do they come to Tulip Moment? How about oustanding customer service, high quality flowers and bulbs, and easy-to-understand care options. And we do all of it at an affordable price. Whether you're a weathered gardener, just getting started, planting a full garden or looking for something to stick in a vase with water, we've got what you're looking for, and we're happy to ship anywhere in the continental U.S.</p>
             <p class="card-text">Want tulips for your house or garden? We have colors and shapes for every taste and budget.</p>
             <!--Add v-if and v-else to buttons-->
             <a href="/images" v-if="show" class="btn" data-toggle="tooltip" data-placement="right" title="See more tulips!">Buy tulips</a>
@@ -276,6 +276,14 @@ export default {
     width: 55rem;
     margin: 1rem;
   }
+}
+
+button {
+  margin-bottom: 1rem;
+}
+
+a {
+  margin-bottom: 1rem;
 }
 
 .api-container {
