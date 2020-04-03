@@ -97,12 +97,12 @@
         <!--Feature card-->
         <div class="card float-right" id="homeFeature">
           <div class="card-body">
-            <h5 class="card-title">The latest on gardening</h5>
+            <h5 class="card-title">The latest on tulips</h5>
 
             <div class="api-container" v-if="items">
               <api
                 v-for="item of items"
-                :key="item.id"
+                :key="item.author"
                 :item="item"              
               /> 
               <a href="NewsAPI.org">Powered by News API</a> 
@@ -124,21 +124,22 @@ export default {
   },
   data (){
     return {
+      show: false,
       loading: true,
-      items: [],
-      errorMessage: undefined
+      items: null,
+      errorMessage: false
     }
   },
   mounted() {
     console.log("I'm mounted!")
-    axios.defaults.headers.common['x-api-key'] = "ce4b66f1e64b4c748b3fc0ee457acb23"
     axios
-      .get('https://newsapi.org/v2/everything?q=garden&apiKey=ce4b66f1e64b4c748b3fc0ee457acb23')
+      .get('https://newsapi.org/v2/everything?qInTitle=tulips&pageSize=3&sortBy=popularity&apiKey=ce4b66f1e64b4c748b3fc0ee457acb23', { params: { limit:1, size:"full" } } )
       .then(response => {
         console.log('There is a response here', response)
-        (this.items = response.data)
+        this.items = response.data.articles
       })
-      .catch(err=>{
+      //.then ()
+      .catch(err => {
         console.error('uh oh something is wrong', response)
         this.errorMessage = "oops we have an error"
       })
@@ -255,6 +256,12 @@ export default {
     color: #EFA885;
 }
 
+.btn {
+  background-color: #FBDCCE;
+  border-style: none;
+  color: white;
+}
+
 #homeFeature {
     width: 18rem;
     height: 50%;
@@ -269,16 +276,21 @@ export default {
   }
 }
 
-
-.api-container img{
-  width: 80%;
-  margin: 1rem;
+.api-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.btn {
-  background-color: #FBDCCE;
-  border-style: none;
+@media screen and (min-width: 1378px) {
+  .api-container {
+    flex-direction: column;
+  }
+}
 
+@media screen and (max-width: 789px) {
+  .api-container {
+    flex-flow: row wrap;
+  }
 }
 
 #flowers {
@@ -290,10 +302,5 @@ export default {
     margin-left: 18%;
     margin-bottom: 2rem;
 }
-
-.carousel-inner img {
-      width: 100%;
-      height: 100%;
-  }
 
 </style>

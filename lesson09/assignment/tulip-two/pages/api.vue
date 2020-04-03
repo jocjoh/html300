@@ -1,10 +1,9 @@
 <template>
     
-    <div>
-        <h3> {{ item.name }} </h3>
+    <div class="flex-item">
+        <h6> {{ item.source.name }} </h6>
         <a href="item.url"> {{ item.title }} </a>
-        <img :src="item.urlToImage">
-        <p> {{ item.description }} </p>
+        <p><img :src="item.urlToImage"></p>
     </div>
     
 </template>
@@ -18,7 +17,31 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 
+.flex-item {
+    width: 11rem;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 680px) {
+  .flex-item {
+    width: 35%;
+  }
+}
+
+h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #DFBBB6;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 100%;
+}
 
 </style>
