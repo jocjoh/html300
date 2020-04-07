@@ -129,7 +129,8 @@ export default {
       show: false,
       loading: true,
       items: null,
-      errorMessage: false
+      errorMessage: false,
+      title: 'Hello World!'
     }
   },
   mounted() {
@@ -145,6 +146,14 @@ export default {
         console.error('uh oh something is wrong', response)
         this.errorMessage = "oops we have an error"
       })
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'This is the home page with customer quotes, images, and the News API' }
+      ]
+    }
   }
 }
 </script>

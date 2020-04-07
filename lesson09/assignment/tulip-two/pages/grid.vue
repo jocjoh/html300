@@ -32,8 +32,18 @@
         { season: 'Fall:', months: 'Sep. 1-Nov. 30', hours: 'Hours: W-Sun, 10 a.m.-7 p.m. (Closed Monday & Tuesday)' },
         { season: 'Winter', months: 'Dec. 1-Feb. 28', hours: 'Hours: W-Sun, noon-7 p.m. (Closed Monday & Tuesday)' },
       ],
+      title: 'Grid'
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'This page contains open hours by season' }
+      ]
     }
   }
+
 }
 </script>
 

@@ -14,21 +14,30 @@ var card6 = require('../static/card6.jpg')
 export default {
 name: 'Images',
 mixins: [mixins],
-components: {
-  photos
-},
-data () {
-  return {
-    images: [
-      { src: card1, alt: 'field of red tulips', name: 'Classic Red', caption: 'Our most popular tulip, this classic is the quintessential sign of spring.' },
-      { src: card2, alt: 'white and yellow tulips', name: 'Fire on the Mountain', caption: 'With petals that look like flames, this variety is only for the bold.' },
-      { src: card3, alt: 'Peach colored tulip surrounded by purple tulips', name: 'Amethyst', caption: 'If you love a splash of purple, this one is perfect for your home or as a gift.' },
-      { src: card4, alt: 'closed purple tulip', name: 'Peach Sunrise', caption: 'One of our rare varieties, this tulip only makes an appearance every few years.' },
-      { src: card5, alt: 'bright pink tulip', name: 'Scarlett Letter', caption: 'This head-turner is great in a mixed bouquet for a vibrant pop of color.' },
-      { src: card6, alt: 'yellow tulip with red edges', name: 'Snow Top', caption: 'This elegent and clean variety can brighten up any room or corner of your garden.' }
-    ]
+  components: {
+    photos
+  },
+  data () {
+    return {
+      images: [
+        { src: card1, alt: 'field of red tulips', name: 'Classic Red', caption: 'Our most popular tulip, this classic is the quintessential sign of spring.' },
+        { src: card2, alt: 'white and yellow tulips', name: 'Fire on the Mountain', caption: 'With petals that look like flames, this variety is only for the bold.' },
+        { src: card3, alt: 'Peach colored tulip surrounded by purple tulips', name: 'Amethyst', caption: 'If you love a splash of purple, this one is perfect for your home or as a gift.' },
+        { src: card4, alt: 'closed purple tulip', name: 'Peach Sunrise', caption: 'One of our rare varieties, this tulip only makes an appearance every few years.' },
+        { src: card5, alt: 'bright pink tulip', name: 'Scarlett Letter', caption: 'This head-turner is great in a mixed bouquet for a vibrant pop of color.' },
+        { src: card6, alt: 'yellow tulip with red edges', name: 'Snow Top', caption: 'This elegent and clean variety can brighten up any room or corner of your garden.' }
+      ],
+      title: 'Images'
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'This page contains tulip images' }
+      ]
+    }
   }
- }
 }
 
 </script>

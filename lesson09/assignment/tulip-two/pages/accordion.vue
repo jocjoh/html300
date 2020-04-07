@@ -31,20 +31,28 @@
 <script>
 
 export default {
-name: 'Images',
-data () {
-  return {
-  items: [
-    { faq: 'Why is the Pacific Northwest a haven for tulips?', answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    { faq: 'How do I transport my bulbs and flowers safely?', answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    { faq: 'Where should I plant my tulip bulbs?', answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    { faq: 'How long do fresh cut tulips last?', answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    { faq: 'What sets Tulip Fever tulips above the rest?', answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-  ],
-
-  show: false,
+  name: 'Accordion',
+  data () {
+    return {
+      items: [
+        { faq: 'Why is the Pacific Northwest a haven for tulips?', answer: 'The moderate climate, with wet winters and springs, provide optimal growing environments for tulips.' },
+        { faq: 'How do I transport my bulbs and flowers safely?', answer: 'We provide boxes for bulbs and special cut flower bags with water upon request.' },
+        { faq: 'Where should I plant my tulip bulbs?', answer: 'We recommend planting in areas with full sun and away from animal access.' },
+        { faq: 'How long do fresh cut tulips last?', answer: 'If following our provided instructions, your flowers should live between 5-7 days.' },
+        { faq: 'What sets Tulip Fever tulips above the rest?', answer: 'Our high quality flowers, customer service, and year-round availability.' },
+      ],
+      title: 'Accordion',
+      show: false,
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'This page contains frequently asked questions and answers about tulips' }
+      ]
+    }
   }
-}
 }
 
 
